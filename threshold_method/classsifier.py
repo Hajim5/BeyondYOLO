@@ -22,7 +22,7 @@ from typing import List
 # CONFIGURATION
 # ==========================================================
 
-TEMPLATE_PATH = "cup_template_ph4.jpg"
+TEMPLATE_PATH = "CUP TEMPLATE"
 
 MATCH_METHOD = cv2.TM_CCORR_NORMED
 
