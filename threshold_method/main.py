@@ -22,8 +22,8 @@ from classifier import CupClassifier
 # CONFIGURATION
 # --------------------------------------------------
 
-VIDEO_PATH = r"C:\Users\PC-1\Downloads\sensory\template_method\testvideo_ph4\ph4.Avi"
-CONFIG_PATH = "config_ph4_thresh.json"
+VIDEO_PATH = r"INPUT_FILE"
+CONFIG_PATH = "CONFIG.JSON_FILE"
 
 DISPLAY_WIDTH = 1800
 DISPLAY_HEIGHT = 1013
