@@ -8,13 +8,12 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
-
 # ============================================================
 # 1. PATHS
 # ============================================================
 
 BASE_DIR = Path(
-    r"C:\Users\PC-1\Downloads\sensory\full_rnd"
+    r"OWN_INPUT"
 )
 
 EDGE_CSV = (
@@ -31,57 +30,31 @@ OUTPUT_DIR = (
     / "decision_rnd_v2"
 )
 
-
 # ============================================================
 # 2. SELECTED EDGE CONFIGURATION
 # ============================================================
 
 SELECTED_CONFIGURATION = (
-    "gray_gaussian_scale_1.00_canny_75_175"
+    "OWN_RESULT"
 )
-
 
 # ============================================================
 # 3. VIDEOS
 # ============================================================
 
-ALL_VIDEOS = [
-    "normal-op1_E2_S1.mp4",
-    "normal_op7_E2_G1_S6_I1.mp4",
-    "normal-op4_E1_S4_G1.mp4",
-    "normal-op5_E1_E2_S5_S6.mp4",
-    "normal-op3_E1_E2_S2_S3_G1.mp4",
-    "normal-op2_E1_S3_I1.mp4",
-]
-
+ALL_VIDEOS = ["OWN_INPUT"]
 
 # ============================================================
 # 4. BASELINE VIDEOS
 # ============================================================
 
-BASELINE_VIDEOS = [
-    "normal-op1_E2_S1.mp4",
-    "normal-op4_E1_S4_G1.mp4",
-]
-
+BASELINE_VIDEOS = ["OWN_INPUT"]
 
 # ============================================================
 # 5. EXPECTED MACHINES
 # ============================================================
 
-EXPECTED_MACHINES = [
-    "E1",
-    "E2",
-    "G1",
-    "I1",
-    "S1",
-    "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S6",
-]
-
+EXPECTED_MACHINES = ["OWN_MACHINE"]
 
 # ============================================================
 # 6. SETTINGS
@@ -94,7 +67,6 @@ THRESHOLD_SEARCH_POINTS = 1000
 BASELINE_MARGIN_SEARCH_POINTS = 500
 
 EPS = 1e-12
-
 
 # ============================================================
 # 7. OUTPUT DIRECTORIES
@@ -137,7 +109,6 @@ def create_directories():
             exist_ok=True
         )
 
-
 # ============================================================
 # 8. SAFE DIVIDE
 # ============================================================
@@ -148,7 +119,6 @@ def safe_divide(a, b):
         return 0.0
 
     return a / b
-
 
 # ============================================================
 # 9. METRICS
@@ -242,7 +212,6 @@ def calculate_metrics(y_true, y_pred):
         "false_negative_rate": fnr,
     }
 
-
 # ============================================================
 # 10. BINARY BALANCED ACCURACY
 # ============================================================
@@ -290,7 +259,6 @@ def binary_balanced_accuracy(y_true, y_pred):
         sensitivity
         + specificity
     ) / 2
-
 
 # ============================================================
 # 11. LOAD EDGE DATA
