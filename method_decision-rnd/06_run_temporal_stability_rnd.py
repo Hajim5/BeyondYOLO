@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 # ============================================================
 
 BASE_DIR = Path(
-    r"C:\Users\PC-1\Downloads\sensory\full_rnd"
+    r"OWN_INPUT"
 )
 
 PREDICTIONS_CSV = (
@@ -39,24 +39,11 @@ OUTPUT_DIR = (
     / "06_temporal_stability_rnd"
 )
 
-
 # ============================================================
 # 2. MACHINES
 # ============================================================
 
-EXPECTED_MACHINES = [
-    "E1",
-    "E2",
-    "G1",
-    "I1",
-    "S1",
-    "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S6",
-]
-
+EXPECTED_MACHINES = ["OWN_MACHINE"]
 
 # ============================================================
 # 3. TEMPORAL STRATEGIES
@@ -168,7 +155,6 @@ DIRS = {
         / "05_graphs"
         / "timelines",
 }
-
 
 def create_directories():
 
