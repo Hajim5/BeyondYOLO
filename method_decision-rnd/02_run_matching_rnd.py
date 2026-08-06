@@ -11,21 +11,19 @@ import matplotlib.pyplot as plt
 from scipy.stats import wasserstein_distance
 from skimage.metrics import structural_similarity as structural_similarity
 
-
 warnings.filterwarnings("ignore")
-
 
 # ============================================================
 # PATHS
 # ============================================================
 
 BASE_DIR = Path(
-    r"C:\Users\PC-1\Downloads\sensory\full_rnd"
+    r"OWN_INPUT"
 )
 
 CONFIG_PATH = BASE_DIR / "config.json"
 
-TEMPLATE_PATH = BASE_DIR / "cup_template.jpg"
+TEMPLATE_PATH = BASE_DIR / "OWN_INPUT"
 
 GROUND_TRUTH_PATH = (
     BASE_DIR
@@ -68,42 +66,19 @@ METHOD_DIRS = {
 # VIDEO MAPPING
 # ============================================================
 
-VIDEO_MACHINES = {
-    "normal-op1_E2_S1.mp4":
-        ["E2", "S1"],
-
-    "normal-op2_E1_S3_I1.mp4":
-        ["E1", "S3", "I1"],
-
-    "normal-op3_E1_E2_S2_S3_G1.mp4":
-        ["E1", "E2", "S2", "S3", "G1"],
-
-    "normal-op4_E1_S4_G1.mp4":
-        ["E1", "S4", "G1"],
-
-    "normal-op5_E1_E2_S5_S6.mp4":
-        ["E1", "E2", "S5", "S6"],
-
-    "normal_op7_E2_G1_S6_I1.mp4":
-        ["E2", "G1", "S6", "I1"],
-}
+VIDEO_MACHINES = {"OWN_INPUT"}
 
 
 # ============================================================
 # EXPERIMENT SETTINGS
 # ============================================================
-
 FRAME_STEP = 3
-
-
 # Template scales
 TEMPLATE_SCALES = [
     0.75,
     1.00,
     1.25,
 ]
-
-
 # Binary fixed thresholds
 BINARY_THRESHOLDS = [
     100,
@@ -111,20 +86,15 @@ BINARY_THRESHOLDS = [
     150,
     175,
 ]
-
-
 # Canny experiments
 CANNY_CONFIGS = [
     (50, 150),
     (75, 175),
     (100, 200),
 ]
-
-
 # ============================================================
 # PREPROCESSING PIPELINES
 # ============================================================
-
 PREPROCESSING_PIPELINES = [
     "original",
     "gray",
@@ -134,12 +104,9 @@ PREPROCESSING_PIPELINES = [
     "gray_median_clahe",
     "gray_gaussian_clahe",
 ]
-
-
 # ============================================================
 # CREATE OUTPUT DIRECTORIES
 # ============================================================
-
 def create_output_directories():
 
     for path in METHOD_DIRS.values():
