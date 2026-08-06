@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore")
 # ============================================================
 
 BASE_DIR = Path(
-    r"C:\Users\PC-1\Downloads\sensory\full_rnd"
+    r"OWN_INPUT"
 )
 
 EDGE_CSV = (
@@ -39,47 +39,25 @@ OUTPUT_DIR = (
     / "05_baseline_decision_rnd"
 )
 
-
 # ============================================================
 # 2. LOCKED MATCHING CONFIGURATION
 # ============================================================
 
 SELECTED_CONFIGURATION = (
-    "gray_gaussian_scale_1.00_canny_75_175"
+    "OWN_RESULT"
 )
-
 
 # ============================================================
 # 3. VIDEOS
 # ============================================================
 
-VIDEOS = [
-    "normal-op1_E2_S1.mp4",
-    "normal_op7_E2_G1_S6_I1.mp4",
-    "normal-op4_E1_S4_G1.mp4",
-    "normal-op5_E1_E2_S5_S6.mp4",
-    "normal-op3_E1_E2_S2_S3_G1.mp4",
-    "normal-op2_E1_S3_I1.mp4",
-]
-
+VIDEOS = ["OWN_INPUT"]
 
 # ============================================================
 # 4. MACHINES
 # ============================================================
 
-EXPECTED_MACHINES = [
-    "E1",
-    "E2",
-    "G1",
-    "I1",
-    "S1",
-    "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S6",
-]
-
+EXPECTED_MACHINES = ["OWN_MACHINE"]
 
 # ============================================================
 # 5. SETTINGS
@@ -92,7 +70,6 @@ MIN_CLASS_SAMPLES = 3
 # Number of candidate thresholds tested between observed
 # delta values.
 THRESHOLD_GRID_POINTS = 1000
-
 
 # ============================================================
 # 6. OUTPUT DIRECTORIES
