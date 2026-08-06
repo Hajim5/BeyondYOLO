@@ -9,7 +9,7 @@ import numpy as np
 # CONFIGURATION
 # ============================================================
 
-BASE_DIR = Path(r"C:\Users\PC-1\Downloads\sensory\full_rnd")
+BASE_DIR = Path(r"OWN_INPUT")
 
 CONFIG_PATH = BASE_DIR / "config.json"
 
@@ -20,31 +20,7 @@ ANNOTATION_CSV = OUTPUT_DIR / "annotations.csv"
 INTERVAL_CSV = OUTPUT_DIR / "annotation_intervals.csv"
 
 
-VIDEO_MACHINES = {
-    "normal-op1_E2_S1.mp4": [
-        "E2", "S1"
-    ],
-
-    "normal-op2_E1_S3_I1.mp4": [
-        "E1", "S3", "I1"
-    ],
-
-    "normal-op3_E1_E2_S2_S3_G1.mp4": [
-        "E1", "E2", "S2", "S3", "G1"
-    ],
-
-    "normal-op4_E1_S4_G1.mp4": [
-        "E1", "S4", "G1"
-    ],
-
-    "normal-op5_E1_E2_S5_S6.mp4": [
-        "E1", "E2", "S5", "S6"
-    ],
-
-    "normal_op7_E2_G1_S6_I1.mp4": [
-        "E2", "G1", "S6", "I1"
-    ],
-}
+VIDEO = {" OWN_INPUT "}
 
 
 # ============================================================
@@ -68,7 +44,6 @@ MIN_PLAY_DELAY_MS = 20
 MAX_PLAY_DELAY_MS = 300
 
 SPEED_CHANGE_MS = 20
-
 
 # Navigation
 SMALL_SEEK_FRAMES = 5
