@@ -8,13 +8,12 @@ import matplotlib.pyplot as plt
 
 warnings.filterwarnings("ignore")
 
-
 # ============================================================
 # 1. PATHS
 # ============================================================
 
 BASE_DIR = Path(
-    r"C:\Users\PC-1\Downloads\sensory\full_rnd"
+    r"OWN_INPUT"
 )
 
 RESULTS_DIR = (
@@ -27,7 +26,6 @@ OUTPUT_DIR = (
     / "07_final_system_integration"
 )
 
-
 # ------------------------------------------------------------
 # Original machine / ROI configuration
 # ------------------------------------------------------------
@@ -36,7 +34,6 @@ ORIGINAL_CONFIG_JSON = (
     BASE_DIR
     / "config.json"
 )
-
 
 # ------------------------------------------------------------
 # 05 - Baseline + Decision R&D
@@ -49,7 +46,6 @@ DECISION_CSV = (
     / "final_machine_decisions.csv"
 )
 
-
 # ------------------------------------------------------------
 # 06 - Temporal Stability R&D
 # ------------------------------------------------------------
@@ -61,7 +57,6 @@ TEMPORAL_CSV = (
     / "final_temporal_decisions.csv"
 )
 
-
 TEMPORAL_JSON = (
     RESULTS_DIR
     / "06_temporal_stability_rnd"
@@ -69,24 +64,11 @@ TEMPORAL_JSON = (
     / "temporal_stability_config.json"
 )
 
-
 # ============================================================
 # 2. EXPECTED MACHINES
 # ============================================================
 
-EXPECTED_MACHINES = [
-    "E1",
-    "E2",
-    "G1",
-    "I1",
-    "S1",
-    "S2",
-    "S3",
-    "S4",
-    "S5",
-    "S6",
-]
-
+EXPECTED_MACHINES = ["OWN_INPUT"]
 
 # ============================================================
 # 3. SELECTED MATCHING METHOD
@@ -94,33 +76,7 @@ EXPECTED_MACHINES = [
 # Winner from Edge Matching R&D
 # ============================================================
 
-MATCHING_CONFIG = {
-
-    "method":
-        "edge_template_matching",
-
-    "variant":
-        "gray_gaussian_scale_1.00_canny_75_175",
-
-    "image_representation":
-        "grayscale",
-
-    "preprocessing":
-        "gaussian_blur",
-
-    "scale":
-        1.00,
-
-    "canny_low":
-        75,
-
-    "canny_high":
-        175,
-
-    "template_matching_method":
-        "TM_CCOEFF_NORMED",
-}
-
+MATCHING_CONFIG = {"OWN_RESULT"}
 
 # ============================================================
 # 4. OUTPUT DIRECTORIES
